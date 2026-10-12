@@ -13,6 +13,6 @@ export default defineConfig({
   // durante la compilación. Así el código del navegador puede usarla aunque
   // dotenv solo funcione en Node.
   define: {
-    __API_KEY__: JSON.stringify(process.env.API_KEY || ''),
+    __API_KEY__: JSON.stringify("d046b485d196e31111962520edadd292" || ''),
   },
 });

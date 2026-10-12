@@ -7,7 +7,7 @@
 
 // __API_KEY__ la sustituye Vite al compilar (ver vite.config.js, que la lee del
 // fichero .env con la librería dotenv).
-const API_KEY = d046b485d196e31111962520edadd292;
+const API_KEY = __API_KEY__;
 
 const API_URL = 'https://api.themoviedb.org/3';
 const IMAGE_URL = 'https://image.tmdb.org/t/p';
