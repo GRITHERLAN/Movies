@@ -1,0 +1,32 @@
+/* Variables de diseño (colores y tipografías tomados de las imágenes de Design/).
+   Se usan con var(--nombre) en el resto de hojas de estilo. */
+:root {
+  /* Fondos */
+  --color-bg: #0e1016;
+  --color-surface: #171a22;
+  --color-surface-2: #1f232d;
+  --color-border: #2b303b;
+
+  /* Texto */
+  --color-text: #eceef2;
+  --color-muted: #8d93a1;
+
+  /* Acento (amarillo/ámbar del diseño) */
+  --color-accent: #fbbf24;
+  --color-accent-dark: #d99e0b;
+  --color-on-accent: #1a1405;
+
+  /* Estados */
+  --color-green: #34d399;
+  --color-red: #f43f5e;
+
+  /* Tipografías */
+  --font-sans: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+
+  /* Otros */
+  --radius: 0.6rem;
+  --radius-lg: 1rem;
+  --max-width: 124rem;
+  --shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+}
