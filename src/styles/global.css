@@ -139,9 +139,25 @@ body {
 .logo { display: flex; align-items: center; gap: 0.8rem; }
 .logo__mark { width: 1.6rem; height: 2rem; border-radius: 0.3rem; background: var(--color-accent); }
 .logo__text { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; }
-.main-nav { order: 3; width: 100%; overflow-x: auto; }
-.main-nav__list { display: flex; gap: 2rem; }
-.main-nav__link { display: inline-flex; align-items: center; gap: 0.6rem; padding-block: 0.4rem; font-weight: 600; white-space: nowrap; border-bottom: 0.2rem solid transparent; }
+
+/* Botón hamburguesa (móvil): se coloca a la derecha de la cabecera. */
+.menu-toggle {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  padding: 0.6rem;
+  border: 0.1rem solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+.menu-toggle:hover,
+.menu-toggle[aria-expanded='true'] { color: var(--color-accent); border-color: var(--color-accent); }
+
+/* Menú móvil: oculto por defecto; con .is-open ocupa toda la fila inferior. */
+.main-nav { display: none; order: 3; width: 100%; }
+.main-nav.is-open { display: block; }
+.main-nav__list { display: flex; flex-direction: column; gap: 0.4rem; }
+.main-nav__link { display: flex; align-items: center; gap: 0.6rem; padding: 1.2rem 0.4rem; font-weight: 600; white-space: nowrap; border-bottom: 0.2rem solid transparent; }
 .main-nav__link:hover { color: var(--color-accent); }
 .main-nav__link.is-active { color: var(--color-accent); border-color: var(--color-accent); }
 .main-nav__count { padding: 0 0.7rem; border-radius: 99rem; background: var(--color-accent); color: var(--color-on-accent); font-size: 1.1rem; font-weight: 800; }
@@ -250,8 +266,15 @@ body {
 /* ---------- Pantallas medianas y grandes ---------- */
 @media (min-width: 600px) {
   .movie-grid { grid-template-columns: repeat(3, 1fr); }
-  .main-nav { order: 0; width: auto; }
   .container { padding-inline: 2.4rem; }
+}
+
+/* Escritorio/tablet: se oculta la hamburguesa y el menú vuelve a ser horizontal. */
+@media (min-width: 768px) {
+  .menu-toggle { display: none; }
+  .main-nav { display: block; order: 0; width: auto; }
+  .main-nav__list { flex-direction: row; gap: 2rem; }
+  .main-nav__link { display: inline-flex; padding: 0.4rem 0; }
 }
 
 @media (min-width: 900px) {

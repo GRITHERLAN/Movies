@@ -15,7 +15,8 @@ const PATHS = {
   download: 'M12 4v11m-5-4 5 5 5-5M5 20h14',
   trash: 'M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13',
   film: 'M4 4h16v16H4zM4 9h16M4 15h16M9 4v16M15 4v16',
-  reset: 'M4 12a8 8 0 1 0 3-6.200M4 4v5h5',
+  menu: 'M4 6h16M4 12h16M4 18h16',
+  reset:'M4 12a8 8 0 1 0 3-6.200M4 4v5h5',
 };
 
 export default function Icon({ name, filled = false, size = 1.6 }) {
